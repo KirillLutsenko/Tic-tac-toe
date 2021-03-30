@@ -1,0 +1,25 @@
+.scores {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__title {
+    text-decoration: underline;
+  }
+
+  &__player {
+    font-style: italic;
+  }
+
+  &__value {
+    margin-left: 5px;
+    font-style: normal;
+    color: #ffff00;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .scores {
+    margin: 0;
+  }
+}
