@@ -26,10 +26,24 @@ export const GameInfoType = {
   setDisabledSelectors: PropTypes.func.isRequired,
 };
 
+export const GameInfoTypeForGameVsComputer = {
+  winner: PropTypes.string,
+  counter: PropTypes.number.isRequired,
+  setGameField: PropTypes.func.isRequired,
+  setXTurn: PropTypes.func.isRequired,
+  setCounter: PropTypes.func.isRequired,
+};
+
 export const ActType = {
   counter: PropTypes.number.isRequired,
   winner: PropTypes.string,
   firstPlayerX: PropTypes.bool.isRequired,
+};
+
+export const ActTypeForGameVsComputer = {
+  counter: PropTypes.number.isRequired,
+  winner: PropTypes.string,
+  xTurn: PropTypes.bool.isRequired,
 };
 
 export const ScoresType = {

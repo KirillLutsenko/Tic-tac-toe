@@ -1,0 +1,20 @@
+.act {
+  display: block;
+  padding-top: 20px;
+  height: 120px;
+  text-align: center;
+  font-size: 24px;
+
+  &__result,
+  &__draw {
+    color: #ffff00;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .act {
+    padding-top: 10px;
+    height: 60px;
+    font-size: 18px;
+  }
+}

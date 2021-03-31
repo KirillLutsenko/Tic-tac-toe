@@ -1,0 +1,21 @@
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #680202;
+
+  &__selections {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .game {
+    flex-direction: column;
+  }
+}

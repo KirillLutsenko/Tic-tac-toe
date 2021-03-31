@@ -20,3 +20,7 @@ export const identifyWinner = (squares) => {
 
   return null;
 };
+
+export const compStep = (gameFieldCopy) => {
+  console.log('Sorry, the computer is not ready at the moment');
+}

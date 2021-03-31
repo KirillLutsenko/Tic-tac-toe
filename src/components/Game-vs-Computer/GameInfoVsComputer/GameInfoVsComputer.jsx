@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { GameInfoType } from 'types';
+import { GameInfoTypeForGameVsComputer } from 'types';
 import Act from './Act/Act';
 import './GameInfo.scss';
 import { Scores } from './Scores/Scores';
 
-export const GameInfo = ({
+export const GameInfoVsComputer = ({
   winner,
   counter,
+  xTurn,
   setGameField,
   setXTurn,
   setCounter,
-  setDisabledSelectors,
   firstPlayerX,
 }) => {
   const [firstPlayerScores, setFirstPlayerScores] = useState(0);
@@ -29,7 +29,6 @@ export const GameInfo = ({
     setGameField(Array(9).fill(null));
     setCounter(0);
     setXTurn(true);
-    setDisabledSelectors(false);
   }
 
   return (
@@ -42,7 +41,7 @@ export const GameInfo = ({
       <Act
         counter={counter}
         winner={winner}
-        firstPlayerX={firstPlayerX}
+        xTurn={xTurn}
       />
 
       <Scores
@@ -64,4 +63,4 @@ export const GameInfo = ({
   );
 };
 
-GameInfo.propTypes = GameInfoType;
+GameInfoVsComputer.propTypes = GameInfoTypeForGameVsComputer;

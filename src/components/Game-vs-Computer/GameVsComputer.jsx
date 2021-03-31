@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { GameField } from 'components/Game/GameField/GameField';
 import { identifyWinner } from 'helpers';
-import { GameInfoVsPlayer } from 'components/Game/GameInfo/GameInfoVsPlayer';
-import { SideSwitch } from './SideSwitch/SideSwitch';
-import './Game.scss';
+import { GameInfoVsComputer } from 'components/Game-vs-Computer/GameInfoVsComputer/GameInfoVsComputer';
+import { compStep } from 'helpers';
+import './GameVsComputer.scss';
 
-export const Game = () => {
+export const GameVsComputer = () => {
   const [gameField, setGameField] = useState(Array(9).fill(null));
   const [xTurn, setXTurn] = useState(true);
   const [counter, setCounter] = useState(0);
-  const [firstPlayerX, setFirstPlayerX] = useState(true);
-  const [disabledSelectors, setDisabledSelectors] = useState(false);
   const winner = identifyWinner(gameField);
 
   const makeMoveClick = (index) => {
@@ -20,36 +18,27 @@ export const Game = () => {
       return;
     };
 
-    gameFieldCopy[index] = xTurn ? 'X' : 'O';
+    gameFieldCopy[index] = 'X';
 
-    setDisabledSelectors(true);
     setGameField(gameFieldCopy);
-    setXTurn(!xTurn);
+    compStep(gameFieldCopy);
     setCounter(counter + 1);
-    setFirstPlayerX(!firstPlayerX);
   };
 
   return (
     <div className="game">
-      <SideSwitch
-        firstPlayerX={firstPlayerX}
-        setFirstPlayerX={setFirstPlayerX}
-        disabledSelectors={disabledSelectors}
-      />
-
       <GameField
         squares={gameField}
         makeMoveClick={makeMoveClick}
       />
 
-      <GameInfoVsPlayer
+      <GameInfoVsComputer
         setGameField={setGameField}
         setXTurn={setXTurn}
-        setDisabledSelectors={setDisabledSelectors}
         setCounter={setCounter}
+        xTurn={xTurn}
         counter={counter}
         winner={winner}
-        firstPlayerX={firstPlayerX}
       />
     </div>
   );
