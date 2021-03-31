@@ -4,12 +4,21 @@
 
 - Create a tic-tac-toe game where players can play one computer at a time.
 - It is desirable to have in the game:
-  1. Progress indicator.
-  2. Counter of moves.
-  3. Counter of victories for player 1 or player 2.
-  4. The ability for the players to choose to play for crosses or for noughts.
+  - Progress indicator.
+  - Counter of moves.
+  - Counter of victories for player 1 or player 2.
+  - The ability for the players to choose to play for crosses or for noughts.
 
 
-**Bonus Task***
+**Description**
+- Tech stack: React(hooks), BEM, SASS.
+- Fully responsive layout(mobiles, tablets, laptops, high screens)
+- All buttons and links are interactive
 
-- Modify the game so that the player can play against the player's AI. The AI player must have at least one winning strategy, otherwise his moves can be random
+**Installing**
+- Fork and clone this repository
+- Run npm install in your terminal
+- Run npm start
+
+**Troubleshooting**
+Any advise for common problems or issues. For any contributing or problem solving you could find me [here](https://www.linkedin.com/in/kirill-lutsenko-1ab7621bb/) and [here](https://join.skype.com/invite/pmxOlX8nMhpq)
