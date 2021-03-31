@@ -8,12 +8,12 @@ export const Scores = ({ firstPlayerScores, secondPlayerScores, ties }) => {
       <h4 className="scores__title">Scores:</h4>
 
       <span className="scores__player">
-        First Player:
+        Player:
         <b className="scores__value">{firstPlayerScores}</b>
       </span>
 
       <span className="scores__player">
-        Second Player:
+        Computer:
         <b className="scores__value">{secondPlayerScores}</b>
       </span>
 
