@@ -4,10 +4,10 @@
 
 - Create a tic-tac-toe game where players can play one computer at a time.
 - It is desirable to have in the game:
-  1. Progress indicator.
-  2. Counter of moves.
-  3. Counter of victories for player 1 or player 2.
-  4. The ability for the players to choose to play for crosses or for noughts.
+  - Progress indicator.
+  - Counter of moves.
+  - Counter of victories for player 1 or player 2.
+  - The ability for the players to choose to play for crosses or for noughts.
 
 
 **Bonus Task***

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { GameField } from 'components/Game/GameField/GameField';
-import { identifyWinner } from 'helpers';
-import { GameInfo } from 'components/Game/GameInfo/GameInfo';
+import { GameField } from './GameField/GameField';
+import { identifyWinner } from '../../helpers';
+import { GameInfo } from './GameInfo/GameInfo';
 import { SideSwitch } from './SideSwitch/SideSwitch';
 import './Game.scss';
 
@@ -15,8 +15,10 @@ export const Game = () => {
 
   const makeMoveClick = (index) => {
     const gameFieldCopy = [...gameField];
-    
-    if (winner || gameFieldCopy[index]) return;
+
+    if (winner || gameFieldCopy[index]) {
+      return;
+    }
 
     gameFieldCopy[index] = xTurn ? 'X' : 'O';
 
@@ -41,14 +43,14 @@ export const Game = () => {
       />
 
       <GameInfo
+        counter={counter}
+        winner={winner}
+        firstPlayerX={firstPlayerX}
         setGameField={setGameField}
         setXTurn={setXTurn}
         setDisabledSelectors={setDisabledSelectors}
         setCounter={setCounter}
-        counter={counter}
-        winner={winner}
-        firstPlayerX={firstPlayerX}
       />
     </div>
-  )
-}
+  );
+};
