@@ -7,6 +7,7 @@ export const GameField = ({ squares, makeMoveClick }) => (
   <div className="game__field field">
     {squares.map((square, index) => (
       <FieldSquare
+        // eslint-disable-next-line react/no-array-index-key
         key={`${square} - ${index}`}
         value={square}
         makeMoveClick={() => makeMoveClick(index)}
