@@ -1,8 +1,13 @@
 import React from 'react';
 import classnames from 'classnames';
 import './SideSwitch.scss';
+import { SideSwitchType } from 'types';
 
-export const SideSwitch = ({ firstPlayerX, setFirstPlayerX, disabledSelectors }) => {
+export const SideSwitch = ({
+  firstPlayerX,
+  setFirstPlayerX,
+  disabledSelectors,
+}) => {
   const chooseShapeClick = () => {
     setFirstPlayerX(!firstPlayerX);
   }
@@ -10,8 +15,8 @@ export const SideSwitch = ({ firstPlayerX, setFirstPlayerX, disabledSelectors })
   return (
     <div 
       className={classnames(
-        "game__side-switch",
-        "side-switch",
+        'game__side-switch',
+        'side-switch',
         {'side-switch__invisible': disabledSelectors},
       )}
     >
@@ -21,10 +26,10 @@ export const SideSwitch = ({ firstPlayerX, setFirstPlayerX, disabledSelectors })
         </span>
 
         <div className="side-switch__labels">
-          <label htmlFor="first-player-x">"X"</label>
-          <label htmlFor="first-player-o">"O"</label>
+          <label htmlFor="first-player-x">&quot;X&quot;</label>
+          <label htmlFor="first-player-o">&quot;O&quot;</label>
         </div>
-        
+
         <div className="side-switch__inputs">
           <input
             type="radio"
@@ -50,10 +55,10 @@ export const SideSwitch = ({ firstPlayerX, setFirstPlayerX, disabledSelectors })
           Second Player
         </span>
         <div className="side-switch__labels">
-          <label htmlFor="second-player-x">"X"</label>
-          <label htmlFor="second-player-o">"O"</label>
+          <label htmlFor="second-player-x">&quot;X&quot;</label>
+          <label htmlFor="second-player-o">&quot;O&quot;</label>
         </div>
-        
+
         <div className="side-switch__inputs">
           <input
             type="radio"
@@ -75,5 +80,7 @@ export const SideSwitch = ({ firstPlayerX, setFirstPlayerX, disabledSelectors })
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+SideSwitch.propTypes = SideSwitchType;

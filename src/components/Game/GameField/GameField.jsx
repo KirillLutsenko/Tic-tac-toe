@@ -1,5 +1,6 @@
-import { FieldSquare } from 'components/Game/GameField/FieldSquare/FieldSquare';
 import React from 'react';
+import { FieldSquare } from 'components/Game/GameField/FieldSquare/FieldSquare';
+import { GameFieldType } from 'types';
 import './GameField.scss';
 
 export const GameField = ({ squares, makeMoveClick }) => {
@@ -9,9 +10,11 @@ export const GameField = ({ squares, makeMoveClick }) => {
         <FieldSquare
           key={`${square} - ${index}`}
           value={square}
-          onClick={() => makeMoveClick(index)}
+          makeMoveClick={() => makeMoveClick(index)}
         />
       ))}
     </div>
   );
 };
+
+GameField.propTypes = GameFieldType;

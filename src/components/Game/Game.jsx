@@ -15,7 +15,7 @@ export const Game = () => {
 
   const makeMoveClick = (index) => {
     const gameFieldCopy = [...gameField];
-    
+
     if (winner || gameFieldCopy[index]) return;
 
     gameFieldCopy[index] = xTurn ? 'X' : 'O';
@@ -50,5 +50,5 @@ export const Game = () => {
         firstPlayerX={firstPlayerX}
       />
     </div>
-  )
-}
+  );
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ActType } from 'types';
 import './Act.scss';
 
 export default function Act({ counter, winner, firstPlayerX }) {
@@ -10,12 +11,20 @@ export default function Act({ counter, winner, firstPlayerX }) {
             <p className="act__result">
               {
                 winner 
-                  ? (!firstPlayerX ? `First Player is a Winner!` : `Second Player is a Winner!`) 
-                  : (firstPlayerX ? 'First Player Turn' : 'Second Player Turn')
+                  ? (!firstPlayerX 
+                      ? `First Player is a Winner!` 
+                      : `Second Player is a Winner!`
+                    ) 
+                  : (firstPlayerX 
+                      ? 'First Player Turn' 
+                      : 'Second Player Turn'
+                    )
               }
             </p>
           )
       }
     </div>
-  )
+  );
 }
+
+Act.propTypes = ActType;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScoresType } from 'types';
 import './Scores.scss';
 
 export const Scores = ({ firstPlayerScores, secondPlayerScores, ties }) => {
@@ -10,7 +11,7 @@ export const Scores = ({ firstPlayerScores, secondPlayerScores, ties }) => {
         First Player:
         <b className="scores__value">{firstPlayerScores}</b>
       </span>
-      
+
       <span className="scores__player">
         Second Player:
         <b className="scores__value">{secondPlayerScores}</b>
@@ -21,5 +22,7 @@ export const Scores = ({ firstPlayerScores, secondPlayerScores, ties }) => {
         <b className="scores__value">{ties}</b>
       </span>
     </div>
-  )
-}
+  );
+};
+
+Scores.propTypes = ScoresType;

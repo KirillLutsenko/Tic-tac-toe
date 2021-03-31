@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { GameInfoType } from 'types';
 import Act from './Act/Act';
 import './GameInfo.scss';
 import { Scores } from './Scores/Scores';
 
 export const GameInfo = ({
+  winner,
+  counter,
   setGameField,
   setXTurn,
   setCounter,
-  winner,
-  counter,
   setDisabledSelectors,
   firstPlayerX,
 }) => {
@@ -18,14 +19,13 @@ export const GameInfo = ({
 
   const startNewGame = () => {
     if (!firstPlayerX && winner != null) {
-      setFirstPlayerScores(firstPlayerScores + 1)
+      setFirstPlayerScores(firstPlayerScores + 1);
     } else if (firstPlayerX && winner != null) {
-      setSecondPlayerScores(secondPlayerScores + 1)
+      setSecondPlayerScores(secondPlayerScores + 1);
     } else {
       setTies(ties + 1);
     }
-    
-  
+
     setGameField(Array(9).fill(null));
     setCounter(0);
     setXTurn(true);
@@ -45,7 +45,7 @@ export const GameInfo = ({
         firstPlayerX={firstPlayerX}
       />
 
-      <Scores 
+      <Scores
         firstPlayerScores={firstPlayerScores}
         secondPlayerScores={secondPlayerScores}
         ties={ties}
@@ -55,6 +55,7 @@ export const GameInfo = ({
         <button
           className="info__restart-btn"
           onClick={startNewGame}
+          type="button"
         >
           Start new game
         </button>
@@ -62,3 +63,5 @@ export const GameInfo = ({
     </div>
   );
 };
+
+GameInfo.propTypes = GameInfoType;
