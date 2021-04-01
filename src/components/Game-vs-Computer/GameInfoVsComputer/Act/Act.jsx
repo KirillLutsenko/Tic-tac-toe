@@ -17,7 +17,7 @@ export default function Act({ counter, winner, xTurn}) {
                       ? `Player is a Winner!` 
                       : `Computer is a Winner!`
                     ) 
-                  : 'Sorry, the computer is not ready at the moment'//(xTurn ? 'Player Turn' : 'Computer Turn')
+                  : (xTurn ? 'Player Turn' : 'Computer Turn')
               }
             </p>
           )
