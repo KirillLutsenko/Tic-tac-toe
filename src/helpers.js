@@ -24,12 +24,10 @@ export const identifyWinner = (squares) => {
 export const compStep = (gameFieldCopy) => {
   if (gameFieldCopy[4] == null) {
     gameFieldCopy[4] = 'O';
-    console.log('way1')
   } else if (gameFieldCopy[0] === 'X' && gameFieldCopy[3] === 'X' && gameFieldCopy[4] === 'O') {
     gameFieldCopy[6] = 'O';
   } else if (gameFieldCopy[4] === 'X' || (gameFieldCopy[0] === 'X' && gameFieldCopy[1] === 'X' && gameFieldCopy[2] === null && gameFieldCopy[8] !=='X' )) {
     gameFieldCopy[2] = 'O';
-    console.log('way2')
   }
 }
 //    else if (gameFieldCopy[6] === 'X' && gameFieldCopy[3] === null && gameFieldCopy[8] !== 'X') {
