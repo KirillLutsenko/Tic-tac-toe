@@ -1,4 +1,4 @@
-[DEMO LINK](https://KirillLutsenko.github.io/tic-tac-toe/)
+
 
 **Tasks:** 
 
