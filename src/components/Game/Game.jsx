@@ -13,8 +13,13 @@ export const Game = () => {
   const [disabledSelectors, setDisabledSelectors] = useState(false);
   const winner = identifyWinner(gameField);
 
+  let a = 6;
+
   const makeMoveClick = (index) => {
+    a = 7;
     const gameFieldCopy = [...gameField];
+
+    console.log(a);
 
     if (winner || gameFieldCopy[index]) {
       return;

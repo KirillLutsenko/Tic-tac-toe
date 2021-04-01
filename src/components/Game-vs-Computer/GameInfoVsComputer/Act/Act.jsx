@@ -3,6 +3,8 @@ import { ActTypeForGameVsComputer } from 'types';
 import './Act.scss';
 
 export default function Act({ counter, winner, xTurn}) {
+  
+
   return (
     <div className="info__act act">
       {(counter === 9 && !winner)

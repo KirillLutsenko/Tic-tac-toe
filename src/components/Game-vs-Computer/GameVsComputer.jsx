@@ -22,7 +22,7 @@ export const GameVsComputer = () => {
 
     setGameField(gameFieldCopy);
     compStep(gameFieldCopy);
-    setCounter(counter + 1);
+    setCounter(counter + 2);
   };
 
   return (
