@@ -9,6 +9,8 @@
   - Counter of victories for player 1 or player 2.
   - The ability for the players to choose to play for crosses or for noughts.
 
+* Modify the game so that the player can play against the player's AI.The AI player must have at least one winning strategy, otherwise his moves can be random
+
 
 **Description**
 - Tech stack: React(hooks, route), BEM, SASS.
