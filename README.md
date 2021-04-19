@@ -13,7 +13,7 @@
 
 
 **Description**
-- Tech stack: React(hooks, route), BEM, SCSS.
+- Tech stack: React(hooks, route), BEM, SASS.
 - Fully responsive layout(mobiles, tablets, laptops, high screens)
 - All buttons and links are interactive
 
